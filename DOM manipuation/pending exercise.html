@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #category {
+            list-style: none;
+            padding-inline: 0;
+        }
+        #category > li {
+            cursor: pointer;
+            width: max-content;
+            font-size: 1.25rem;
+            margin-block: 0.75rem;
+            padding-inline: 0.25rem;
+            text-transform: uppercase;
+            transform-origin: left;
+            transition: all 250ms ease;
+            position: relative;
+        }
+        /* #category > li::before {
+            position: absolute;
+            content: '';
+            width: 75%;
+            height: 100%;
+            left: 0;
+            top:0;
+            z-index: -1;
+            background-image: linear-gradient(to right, rgb(207, 220, 255), rgba(108, 157, 255, 0));
+            transform: scaleX(0);
+            transform-origin:left;
+            transition: all 150ms ease;
+        }
+        #category > li:hover::before {
+            transform: scaleX(1);
+        } */
+        
+        #category > li:hover {
+            transform: translatex(3px) scale(1.1);
+            color: rgb(0, 33, 131);
+        }
+
+        #form {
+            font-family: sans-serif;
+            padding: 2rem;
+            background-color: rgb(90, 90, 90);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input{
+            margin: 1rem;
+            max-width: 300px;
+            width: 200px;
+            padding: 0.25rem;     
+        }
+        #button{
+            width: 75px;
+            padding-top: 0.25rem;
+            font-weight: 600;
+        }
+        .invalid {
+            border: 2px red solid;
+            position: relative;
+        }
+        .invalid::after {
+            content: 'invalid';
+            font-size: 0.25rem;
+            color: red;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        label {
+            font-weight: 600;
+        }
+       
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <ul id="category">
+            <li id="laptop">laptop</li>
+            <li id="mobile">mobile</li>
+            <li id="camera">camera</li>
+            <li id="headphones">headphones</li>
+            <li id="powerbank">powerbank</li>
+            <li id="drones">drones</li>
+        </ul>
+    </div>
+
+    <section>
+        <form action="/" id="form">
+            
+            <div class="input-control">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Name" class="invalid" required>
+                <div class="error"></div>
+            </div>
+
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="example@xyz.com" required>
+                <div class="error"></div>
+            </div>
+
+            <div class="input-control">
+                <label for="tel">Phone</label>
+                <input type="tel" name="tel" id="tel" placeholder="+91 ___ (___) ____" required>
+                <div class="error"></div>
+            </div>
+            <button type="submit" id="button">submit</button>
+        </form>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>

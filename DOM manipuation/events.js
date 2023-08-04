@@ -34,48 +34,48 @@ const colorToggle =(element, color) => {
 // grandparent.addEventListener('click',() => colorToggle(grandparent, 'white'));
 
 //# with event.stopPropagation();
-child.addEventListener('click', (event) => {
-    event.stopPropagation();
-    colorToggle(child, 'white');
-    console.log('child clicked!');
-});
+// child.addEventListener('click', (event) => {
+//     event.stopPropagation();
+//     colorToggle(child, 'white');
+//     console.log('child clicked!');
+// });
 
-parent.addEventListener('click', (event) => {
-    event.stopPropagation();
-    colorToggle(parent, 'white');
-    console.log('parent clicked!');
-}/*, true */); //event happens on capture phase and using stop on capture phase prevents it then and there so event object might not reach the event target.
+// parent.addEventListener('click', (event) => {
+//     event.stopPropagation();
+//     colorToggle(parent, 'white');
+//     console.log('parent clicked!');
+// }/*, true */); //event happens on capture phase and using stop on capture phase prevents it then and there so event object might not reach the event target.
 
-grandparent.addEventListener('click', (event) => {
-    event.stopPropagation();
-    colorToggle(grandparent, 'white');
-    console.log('grandparent clicked!');
-});
+// grandparent.addEventListener('click', (event) => {
+//     event.stopPropagation();
+//     colorToggle(grandparent, 'white');
+//     console.log('grandparent clicked!');
+// });
 
 //# event delegation with target
-// function random(number) {
-//     return Math.floor(Math.random() * number);
-// }
+function random(number) {
+    return Math.floor(Math.random() * number);
+}
   
-// function bgChange() {
-//     const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-//     return rndCol;
-// }
+function bgChange() {
+    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    return rndCol;
+}
 
-// const container = document.querySelector("#container");
+const container = document.querySelector("#container");
 
-// const bgChangeMouseOver = (event) => {
-//     event.target.style.backgroundColor = bgChange();
-//     console.log(event.target);
-// };
+const bgChangeMouseOver = (event) => {
+    event.target.style.backgroundColor = bgChange();
+    console.log(event.target);
+};
 
-// const bgChangeMouseOut = (event) => {
-//     event.target.removeAttribute('style');
-//     console.log(event.target);
-// };
+const bgChangeMouseOut = (event) => {
+    event.target.removeAttribute('style');
+    console.log(event.target);
+};
   
-// container.addEventListener("mouseover", bgChangeMouseOver);
-// container.addEventListener("mouseout", bgChangeMouseOut);
+container.addEventListener("mouseover", bgChangeMouseOver);
+container.addEventListener("mouseout", bgChangeMouseOut);
 
-// grandparent.addEventListener('mouseover', bgChangeMouseOver);
-// grandparent.addEventListener("mouseout", bgChangeMouseOut);
+grandparent.addEventListener('mouseover', bgChangeMouseOver);
+grandparent.addEventListener("mouseout", bgChangeMouseOut);
