@@ -1,4 +1,4 @@
-//CREATE OBJECT WITH OBJECT LITERIAL
+//*CREATE OBJECT WITH OBJECT LITERIAL
 const car = {
     name: 'mustang',
     color: 'black',
@@ -13,7 +13,7 @@ const car = {
 }
 // console.log(car);
 
-//FACTORY FUNCTION
+//*FACTORY FUNCTION
 function createProfile(firstName,lastName,age,married) {
     return {
         firstName,
@@ -34,7 +34,7 @@ const profile1 = createProfile('john','smith',30,true)
 const profile2 = createProfile('ben','paker',25,false)
 // console.log(profile2);
 
-//CONSTRUCTOR FUNCTIONS
+//*CONSTRUCTOR FUNCTIONS
 //should be in PASCAL NOTATION
 //3 things happens when 'new' operator is used 
 // 1.Creates an empty object. 
@@ -43,7 +43,7 @@ const profile2 = createProfile('ben','paker',25,false)
 
 function Circle(radius) {
     this.radius = radius,
-    this.draw = function() {
+    this.draw = () => {
             console.log('draw');
         }
 }
@@ -51,7 +51,7 @@ function Circle(radius) {
 const circleOne = new Circle(1)
 // console.log(circleOne)
 
-// IMPORTANT : pick one and stick with it. see the diffrence using contructor function
+//#IMPORTANT : pick one and stick with it. see the diffrence using contructor function
 // console.log(circleOne.constructor)// using circle function
 // console.log(car.constructor) //created using in nuilt object funtion 
 // console.log(profile1.constructor)//created using in nuilt object funtion
@@ -70,12 +70,12 @@ delete circleOne.color;
 // console.log(square)
 
 
-//IMMUTABLE OR HARDCODED
+//#IMMUTABLE OR HARDCODED
 let a = 10;
 let b = a;
 a = 20;
 // console.log("a =", a, "b =", b);
-//REFERANCE / OBJECT IS STORED SOMEWHERE IN MEMORY AND ADDRESS IS STORED IN THE VARIABLE'S MEMORY LOCATION.
+//#REFERANCE / OBJECT IS STORED SOMEWHERE IN MEMORY AND ADDRESS IS STORED IN THE VARIABLE'S MEMORY LOCATION.
 let c = {age: 10};
 let d = c;
 c.age = 20;
@@ -101,7 +101,7 @@ const increase1 = (obj)=> {
 increase1(number1);
 // console.log(number1);
 
-//IMPORTANT : Primitives are copied by their value. Objects are copied by their reference.
+//#IMPORTANT : Primitives are copied by their value. Objects are copied by their reference.
 
 // for (const key in circleOne)
 //     console.log(key,circleOne[key])

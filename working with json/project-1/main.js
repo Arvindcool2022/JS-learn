@@ -1,4 +1,4 @@
-const productsPage = (array) => {
+const createProductsPage = (array) => {
     array.forEach(obj => {
         const element = `<div class="card">
                             <img class="card-img" src="${obj.Image}" alt="">
@@ -20,7 +20,7 @@ const productsPage = (array) => {
                                 </p>
                                 <p class="DeliveryDetails">${obj.DeliveryDetails}</p>
                             </div>
-                        </div>`
+                        </div>`;
                         document.querySelector('.wrapper').insertAdjacentHTML('beforeend', element);
     });
 }

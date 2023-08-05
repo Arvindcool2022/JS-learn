@@ -161,3 +161,13 @@ const video = {
 // playVideo.call(video,[2]); //apply(thisArg, argsArray)
 // const bounded = playVideo.bind(video); //bind(thisArg, arg1, arg2, /* …, */ argN)
 // bounded(3); // creates a new copy of the orginal function but binded with a obj
+
+const random = ()=> {
+    console.log(this)
+};
+// random();
+
+function rando () {
+    console.log(this);
+}
+// rando();
