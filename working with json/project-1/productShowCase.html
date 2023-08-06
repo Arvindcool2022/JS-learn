@@ -16,16 +16,87 @@
         body {
             font-family: 'Roboto', sans-serif;
         }
+        .container {
+            margin-top: 3rem;
+        }
+        .goback{
+            font-size: 2rem;
+            font-weight: 600;
+            margin-left: 1rem;
+        }
+        .error-message,
+        .error {
+            text-align: center;
+        }
+        .error-message {
+            font-size: 2rem;
+            font-weight: 500;
+            font-style: italic;
+            color: rgb(65, 65, 65);
+            margin-block: 2rem;
+        }
+        .error{
+            font-size: 5rem;
+            font-weight: 500;
+            color: rgb(222, 51, 51);
+        }
+        .container .card {
+            all: unset;
+            max-width: 768px;
+            margin: 2rem auto;
+            border-radius: 15px;
+            display: flex;
+            padding: 2rem;
+            justify-content: space-around;
+            box-shadow: 0 .5rem 1rem  rgba(0,0,0,0.15);
+            transition: all 500ms ease;
+        }
+        .container .card:hover {
+            box-shadow: 0 0.5rem 2rem  rgba(0,0,0,0.5);
+        }
+
+        .container .card-body {
+            align-self: center;
+        }
+        .container .title {
+            font-weight: 900;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-decoration: underline;
+        }
+        .container .offerprice .currency {
+            font-size: 1rem;
+        }
+        
+        .container .originalprice {
+            text-decoration: line-through;
+            opacity: 0.5;
+            font-size: 1rem;
+        }
+        .container .discountPercentage {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        .container .DeliveryDetails,
+        .container .shortDescription {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-block: 0.75rem;
+        }
+
 
     </style>
 </head>
 <body>
     <section>
         <div class="container">
+            <a href="index.html" class="goback">go back</a>
+            <p class="error-message">"Houston, we have a problem"</p>
+            <h1 class="error">Error:404 Product not found</h1>
         </div><!-- wrapper ends -->
     </section>
 
 
-
+<script src="productShowCase.js"></script>
 </body>
 </html>

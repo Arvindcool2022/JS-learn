@@ -1,13 +1,15 @@
 //# PRODUCT PAGE CODE STARTS HERE
+
+//from object to grid
 const createProductsPage = (array) => {
     array.forEach(obj => {
         const element = `<div class="card">
-                            <img class="card-img" src="${obj.Image}" alt="">
+                            <img class="card-img" src="${obj.Image}" alt="${obj.ShortDescription}">
                             <div class="card-body">
                                 <p class="title">${obj.Title}</p>
                                 <p class="shortDescription">
                                     ${obj.ShortDescription}
-                                    </p>
+                                </p>
                                 <p class="price-detail">
                                     <span class="offerPrice">
                                     <span class="currency">${obj.Currency}</span> 
@@ -18,10 +20,10 @@ const createProductsPage = (array) => {
                                         ${obj.OrignalPrice}
                                     </span>
                                     <span class="discountPercentage">${obj.DiscountPercentage}</span>
-                                    </p>
-                                    <p class="DeliveryDetails">${obj.DeliveryDetails}</p>
-                                    </div>
-                                    </div>`;
+                                </p>
+                                <p class="DeliveryDetails">${obj.DeliveryDetails}</p>
+                             </div>
+                        </div>`;
                                     document.querySelector('.wrapper').insertAdjacentHTML('beforeend', element);
     });
 }
@@ -37,17 +39,27 @@ fetch('./product.json')
 
 const wrapper = document.querySelector('.wrapper');
 
-const addProduct = (event) => {
-    let element = event.target
-    console.log(element)
-    let closestCard = element.closest(".card");
-    console.log(closestCard) //#The output in the console will show the div element itself.
-    let htmlContent = closestCard.outerHTML;
-    console.log(htmlContent) //#The output in the console will show the HTML markup as a string.
-    document.querySelector('.container').innerHTML = htmlContent;
+// const addProduct = (event) => {
+//     let closestCard = event.target.closest(".card");
+//     console.log(closestCard) //#The output in the console will show the div element itself.
+//     let htmlContent = closestCard.outerHTML;
+//     console.log(htmlContent) //#The output in the console will show the HTML markup as a string.
+//     document.querySelector('.container').innerHTML = htmlContent;
+// };
+  
+// wrapper.addEventListener("click", addProduct);
+
+const sendProduct = (event) => {
+    // let closestCard = event.target.closest(".card");
+    let selectedProductsHtmlContent = event.target.closest(".card").outerHTML;
+    sessionStorage.setItem('selectedProduct', selectedProductsHtmlContent);
+    window.location.href = 'productShowCase.html'
+    // window.open('productShowCase.html', '_blank');
+
 };
   
-wrapper.addEventListener("click", addProduct);
+wrapper.addEventListener("click", sendProduct);
+
 
 
 
@@ -92,11 +104,13 @@ const createTable = (array) => {
     })
 } 
 
-
-fetch('./todo.json')
+//https:\//jsonplaceholder.typicode.com/
+fetch('https://fakestoreapi.com/users')
 .then(response => response.json())
 .then(mockData => createTable(mockData))
-// .catch((error) => console.error('Error fetching data:', error));
+.catch((error) => console.error('Error in table fetching data:', error));
 
 
 //# CODE FOR TABLE ENDS HERE.
+
+// https://api.openweathermap.org/data/2.5/weather?id={city id}&appid=43c040e5ec13ac612103c48f15cec42f
