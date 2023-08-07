@@ -3,7 +3,7 @@ let numbers = [2, 3];
 
 numbers.push(4, 5); //ending
 numbers.unshift(-1, 0, 1); //beginning
-numbers.splice(2, 2, "one", "two", "three"); //middle(At position 2, add 2 elements)
+numbers.splice(2, 2, 'one', 'two', 'three'); //middle(At position 2, add 2 elements)
 console.log(numbers);
 numbers.splice(2, 2, 1, 2);
 // console.log(numbers);
@@ -16,18 +16,18 @@ numbers.includes(10);
 
 // FINDING ELEMENTS REFERENCE TYPE
 const dimension = [
-  { name: "cubeoid", x: 8, y: 5, z: 5 },
-  { name: "cube", x: 5, y: 5, z: 5 },
-  { name: "circle", r: 5 },
+  { name: 'cubeoid', x: 8, y: 5, z: 5 },
+  { name: 'cube', x: 5, y: 5, z: 5 },
+  { name: 'circle', r: 5 },
 ];
 
 // console.log(dimension.includes({name:'circle', r:5 })); //since its reference type variable both are stored in a diff memory location.
 
 const shapeOne = dimension.find(function (shape) {
-  return shape.name === "circle";
+  return shape.name === 'circle';
 });
 const circleIndex = dimension.findIndex(function (shape) {
-  return shape.name === "circle";
+  return shape.name === 'circle';
 });
 
 // console.log(shapeOne);
@@ -35,7 +35,7 @@ const circleIndex = dimension.findIndex(function (shape) {
 // console.log(circleIndex);
 
 //ARROW FUNCTIONS
-const shapeTwo = dimension.find((shape) => shape.name === "cube");
+const shapeTwo = dimension.find((shape) => shape.name === 'cube');
 //same as ShapeOne.
 // 1. single parameter does need bracket
 // 2. single return statement doesn't need curly brases and the return key word is removed as it is default.
@@ -77,8 +77,8 @@ arr.length = 0;
 
 //COMBINING AND SLICING ARRAY
 
-arr = ["a", "b", { c: 1 }];
-arr2 = ["d", "e", "f"];
+arr = ['a', 'b', { c: 1 }];
+arr2 = ['d', 'e', 'f'];
 
 const combined = arr.concat(arr2);
 // console.log(combined);
@@ -94,7 +94,7 @@ const splice = combined.slice(); // returns a copy
 const combined1 = [...arr, ...arr2];
 // console.log(combined1);
 
-const combined2 = [...arr, "x", "y", ...arr2, "z"];
+const combined2 = [...arr, 'x', 'y', ...arr2, 'z'];
 // console.log(combined2);
 
 const copy = [...combined]; //to copy an array
@@ -114,23 +114,23 @@ for (let elements of combined1)
 
 // JOINING ARRAY and SORTING ARRAY
 
-const myName = "arvind";
+const myName = 'arvind';
 
-const split = myName.split("");
+const split = myName.split('');
 // console.log(split);
 
 split.reverse();
 // console.log(split);
 
-const joined = split.join("");
+const joined = split.join('');
 // console.log(joined);
 
-const name2 = "unique name";
+const name2 = 'unique name';
 
-const split1 = name2.split(" ");
+const split1 = name2.split(' ');
 // console.log(split1);
 
-const joined2 = split1.join("__");
+const joined2 = split1.join('__');
 // console.log(joined2);
 
 const num = [3, 2, 5, 4, 1];
@@ -141,10 +141,10 @@ num.reverse();
 num.reverse();
 
 const city = [
-  { code: 1, city: "chennai" },
-  { code: 2, city: "DELHI" },
-  { code: 3, city: "mumbai" },
-  { code: 4, city: "ahmedabad" },
+  { code: 1, city: 'chennai' },
+  { code: 2, city: 'DELHI' },
+  { code: 3, city: 'mumbai' },
+  { code: 4, city: 'ahmedabad' },
 ];
 // console.log(city);
 
@@ -177,8 +177,8 @@ console.log(filtered);
 
 //MAPPING AN ARRAY
 
-const items = filtered.map((n) => "<li>" + n + "</li>");
-const html = "<ul>" + items.join(" ") + "</ul>";
+const items = filtered.map((n) => '<li>' + n + '</li>');
+const html = '<ul>' + items.join(' ') + '</ul>';
 console.log(html);
 
 const items2 = numbers.map((n) => ({ value: n })); //put object literal into a parenthesis otherwise javascript will parse the curley brace into function block.

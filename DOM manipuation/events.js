@@ -1,17 +1,17 @@
 //* https://www.w3.org/TR/DOM-Level-3-Events/#event-flow
 const colorChange = (element, color) => (element.style.backgroundColor = color);
 
-const grandparent = document.querySelector(".grandparent");
-const parent = document.querySelector(".parent");
-const child = document.querySelector(".child");
+const grandparent = document.querySelector('.grandparent');
+const parent = document.querySelector('.parent');
+const child = document.querySelector('.child');
 const childStyle = window.getComputedStyle(child);
 
 const colorToggle = (element, color) => {
-  let bgColor = element.getAttribute("style");
+  let bgColor = element.getAttribute('style');
 
   bgColor === null
     ? (element.style.backgroundColor = color)
-    : element.removeAttribute("style");
+    : element.removeAttribute('style');
 };
 
 // grandparent.addEventListener('click', e => {
@@ -64,7 +64,7 @@ function bgChange() {
   return rndCol;
 }
 
-const container = document.querySelector("#container");
+const container = document.querySelector('#container');
 
 const bgChangeMouseOver = (event) => {
   event.target.style.backgroundColor = bgChange();
@@ -72,12 +72,12 @@ const bgChangeMouseOver = (event) => {
 };
 
 const bgChangeMouseOut = (event) => {
-  event.target.removeAttribute("style");
+  event.target.removeAttribute('style');
   console.log(event.target);
 };
 
-container.addEventListener("mouseover", bgChangeMouseOver);
-container.addEventListener("mouseout", bgChangeMouseOut);
+container.addEventListener('mouseover', bgChangeMouseOver);
+container.addEventListener('mouseout', bgChangeMouseOut);
 
-grandparent.addEventListener("mouseover", bgChangeMouseOver);
-grandparent.addEventListener("mouseout", bgChangeMouseOut);
+grandparent.addEventListener('mouseover', bgChangeMouseOver);
+grandparent.addEventListener('mouseout', bgChangeMouseOut);

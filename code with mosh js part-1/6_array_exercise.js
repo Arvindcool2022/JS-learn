@@ -59,9 +59,9 @@ const movingAnElement = (array, index, offset) => {
   let output = array.map((x) => x); //output = [...array]; same
   let offsetValidator = index + offset;
 
-  if (index < 0 || index >= array.length) console.error("invalid index");
+  if (index < 0 || index >= array.length) console.error('invalid index');
   else if (offsetValidator < 0 || offsetValidator >= array.length)
-    console.error("invalid offset");
+    console.error('invalid offset');
   else {
     output.splice(index, 1); // delete
     output.splice(offsetValidator, 0, arr[index]); //insert
@@ -80,7 +80,7 @@ const move = (array, index, offset) => {
   let position = index + offset;
 
   if (position < 0 || position >= array.length) {
-    console.error("invalid-offset");
+    console.error('invalid-offset');
     return;
   }
 
@@ -129,10 +129,10 @@ console.log(b);
 //EXERCISE SEVEN
 
 const movies = [
-  { title: "a", year: 2018, rating: 4.5 },
-  { title: "b", year: 2018, rating: 4.7 },
-  { title: "c", year: 2018, rating: 3 },
-  { title: "d", year: 2017, rating: 4.5 },
+  { title: 'a', year: 2018, rating: 4.5 },
+  { title: 'b', year: 2018, rating: 4.7 },
+  { title: 'c', year: 2018, rating: 3 },
+  { title: 'd', year: 2017, rating: 4.5 },
 ];
 
 // const sortDecending = array => array.sort((a, b) => b - a);

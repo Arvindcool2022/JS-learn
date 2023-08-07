@@ -39,7 +39,7 @@ Circle.apply({}, [1]);
 
 // JavaScript objects are dynamic. You can add/remove properties:
 circle.location = {};
-circle["location"] = {};
+circle['location'] = {};
 
 delete circle.location;
 
@@ -49,7 +49,7 @@ for (let key in circle) console.log(key, circle[key]);
 Object.keys(circle);
 
 // To see if an object has a given property
-if ("location" in circle)
+if ('location' in circle)
   // Abstraction means hiding the complexity/details and showing only the essentials.
   // We can hide the details by using private members. Replace "this" with "let".
 
@@ -63,7 +63,7 @@ if ("location" in circle)
 
 // To define a getter/setter, use Object.defineProperty():
 
-Object.defineProperty(this, "defaultLocation", {
+Object.defineProperty(this, 'defaultLocation', {
   get: function () {
     return defaultLocation;
   },

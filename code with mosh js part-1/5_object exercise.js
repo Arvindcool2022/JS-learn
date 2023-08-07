@@ -1,7 +1,7 @@
 // EXERCISE ONE
 const address = {
-  street: "abc",
-  city: "paris",
+  street: 'abc',
+  city: 'paris',
   zipCode: 5013,
 };
 
@@ -16,7 +16,7 @@ function createAddress(street, city, zipCode) {
   return { street, city, zipCode };
 }
 
-const addressOne = createAddress("a", "b", 500);
+const addressOne = createAddress('a', 'b', 500);
 const dupilcateAddressOne = addressOne;
 // console.log(addressOne);
 
@@ -25,14 +25,14 @@ function CreateAddress(street, city, zipcode) {
   this.city = city;
   this.zipCode = zipcode;
 }
-const addressTwo = new CreateAddress("a", "b", 500);
+const addressTwo = new CreateAddress('a', 'b', 500);
 // console.log(addressTwo);
 
 //EXERCISE THREE
 
 const areEqual = (addressOne, addressTwo) => {
-  let propertiesOne = "";
-  let propertiesTwo = "";
+  let propertiesOne = '';
+  let propertiesTwo = '';
   for (const key in addressOne) propertiesOne += addressOne[key];
 
   for (const key in addressTwo) propertiesTwo += addressTwo[key];
@@ -42,7 +42,7 @@ const areEqual = (addressOne, addressTwo) => {
 // areEqual(addressOne,addressTwo)
 
 const areSame = (addressOne, addressTwo) => {
-  console.log(addressOne === addressTwo ? "yes" : "no");
+  console.log(addressOne === addressTwo ? 'yes' : 'no');
 };
 
 // areSame(addressOne,addressTwo);
@@ -79,7 +79,7 @@ function areEqual1(obj1, obj2) {
     const val1 = obj1[key];
     const val2 = obj2[key];
 
-    if (typeof val1 === "object" && typeof val2 === "object") {
+    if (typeof val1 === 'object' && typeof val2 === 'object') {
       if (!areEqual(val1, val2)) {
         return false;
       }
@@ -94,13 +94,13 @@ function areEqual1(obj1, obj2) {
 //EXERSISE FOUR
 
 const blogPost = {
-  title: "a",
-  body: "b",
-  author: "xyz",
+  title: 'a',
+  body: 'b',
+  author: 'xyz',
   views: 500,
   comments: [
-    { author: "abc", body: "lorem" },
-    { author: "cde", body: "epsol" },
+    { author: 'abc', body: 'lorem' },
+    { author: 'cde', body: 'epsol' },
   ],
   isLive: true,
 };
@@ -117,13 +117,13 @@ function CreatePost(title, body, author) {
   this.isLive = false;
 }
 
-const blogPost1 = new CreatePost("a", "b", "c");
+const blogPost1 = new CreatePost('a', 'b', 'c');
 // console.log(blogPost1);
 
 //EXERCISE SIX
 const priceRange = [
-  { label: "$", tooltip: "Inexpensive", from: 0, to: 99 },
-  { label: "$$", tooltip: "Moderate", from: 100, to: 199 },
-  { label: "$$$", tooltip: "Expensive", from: 200, to: 500 },
+  { label: '$', tooltip: 'Inexpensive', from: 0, to: 99 },
+  { label: '$$', tooltip: 'Moderate', from: 100, to: 199 },
+  { label: '$$$', tooltip: 'Expensive', from: 200, to: 500 },
 ];
 console.log(priceRange);

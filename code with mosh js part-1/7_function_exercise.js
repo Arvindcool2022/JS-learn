@@ -5,14 +5,14 @@ function sum(...args) {
   let totalSum = 0;
   let invalidInput = 0;
   for (const element of args) {
-    if (typeof element === "number") totalSum += element;
+    if (typeof element === 'number') totalSum += element;
     else if (Array.isArray(element))
       for (const value of element) totalSum += value;
     else ++invalidInput;
   }
-  console.log("sum of the input are", totalSum);
+  console.log('sum of the input are', totalSum);
   invalidInput !== 0
-    ? console.log("invalid input(s) found:", invalidInput)
+    ? console.log('invalid input(s) found:', invalidInput)
     : null;
 }
 
@@ -21,17 +21,17 @@ function sum(...args) {
 //reduce and filter method
 const sum2 = (...arg) => {
   let totalSum = arg.reduce((acc, curVal) => {
-    if (typeof curVal === "number") return (acc += curVal);
+    if (typeof curVal === 'number') return (acc += curVal);
     else if (Array.isArray(curVal))
       return acc + curVal.reduce((acc, num) => acc + num, 0);
     else return acc;
   }, 0);
-  console.log("sum of the inputs are", totalSum);
+  console.log('sum of the inputs are', totalSum);
 
   const invalidInput = arg.filter(
-    (elements) => typeof elements !== "number" && !Array.isArray(elements)
+    (elements) => typeof elements !== 'number' && !Array.isArray(elements)
   ).length;
-  console.log("invalid input(s) found:", invalidInput);
+  console.log('invalid input(s) found:', invalidInput);
 };
 
 // sum2(10,[5,5],100,[],{},'4')
@@ -67,7 +67,7 @@ try {
 }
 
 function countOccurrences(array, searchElement) {
-  if (!Array.isArray(array)) throw new Error("not an array");
+  if (!Array.isArray(array)) throw new Error('not an array');
   else
     return array.reduce((accumulator, current) => {
       const occurrence = current === searchElement ? 1 : 0;

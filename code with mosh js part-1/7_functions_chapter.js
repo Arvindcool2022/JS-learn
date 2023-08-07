@@ -2,19 +2,19 @@
 // console.log(walk);
 
 function walk() {
-  console.log("walk");
+  console.log('walk');
 }
 
 //NAMED FUNCTION EXPRESSION
 // console.log(run); //Uncaught ReferenceError: Cannot access 'run' before initialization
 
 const run = function move() {
-  console.log("run");
+  console.log('run');
 };
 
 //ANONYMOUS FUNCTION EXPRESSION
 const jump = function () {
-  console.log("jump");
+  console.log('jump');
 };
 
 // console.log(run);
@@ -49,8 +49,8 @@ function interest(principal, rate = 8, years = 2) {
 // GETTERS AND SETTERS
 //TRY AND CATCH
 const profile = {
-  firstName: "john",
-  lastName: "smith",
+  firstName: 'john',
+  lastName: 'smith',
   fullName() {
     return `${profile.firstName} ${profile.lastName}`;
   },
@@ -59,17 +59,17 @@ const profile = {
 // console.log(profile.fullName());
 
 const profile2 = {
-  firstName: "raj",
-  lastName: "kumar",
+  firstName: 'raj',
+  lastName: 'kumar',
   get fullName() {
     return `${profile2.firstName} ${profile2.lastName}`;
   },
   set fullName(value) {
-    if (typeof value !== "string")
-      throw new Error("entered value is not a string");
+    if (typeof value !== 'string')
+      throw new Error('entered value is not a string');
 
-    const part = value.split(" ");
-    if (part.length !== 2) throw new Error("enter first and lastname");
+    const part = value.split(' ');
+    if (part.length !== 2) throw new Error('enter first and lastname');
     this.firstName = part[0];
     this.lastName = part[1];
   },
@@ -77,7 +77,7 @@ const profile2 = {
 
 // console.log(profile2);
 try {
-  profile2.fullName = "jane smith"; //change to see the error.
+  profile2.fullName = 'jane smith'; //change to see the error.
 } catch (e) {
   alert(e);
 }
@@ -133,11 +133,11 @@ function Video(title) {
 // const movie = new Video('a');
 //'this' eg: object function
 const video = {
-  title: "a",
+  title: 'a',
   play() {
     console.log(this); //refers to video object
   },
-  tags: ["x", "y", "z"],
+  tags: ['x', 'y', 'z'],
   showTags() {
     this.tags.forEach(
       function (tag) {
@@ -148,7 +148,7 @@ const video = {
     );
   },
   showTags2() {
-    this.tags.forEach((tag) => console.log(this.title, tag, "arrow"));
+    this.tags.forEach((tag) => console.log(this.title, tag, 'arrow'));
     //arrow function inherits the 'this' from the containing function.
   },
 };

@@ -20,7 +20,7 @@ function Stopwatch() {
     if (!running) {
       startTime = new Date();
       running = true;
-    } else console.error("Stopwatch is already started");
+    } else console.error('Stopwatch is already started');
   };
 
   this.stop = () => {
@@ -28,13 +28,13 @@ function Stopwatch() {
       endTime = new Date();
       duration += endTime - startTime;
       running = false;
-    } else console.error("Stopwatch is already stopped");
+    } else console.error('Stopwatch is already stopped');
   };
 
   this.reset = () => {
     startTime, endTime, running, (duration = 0);
   };
-  Object.defineProperty(this, "duration", {
+  Object.defineProperty(this, 'duration', {
     get: () => duration / 1000,
   });
 }

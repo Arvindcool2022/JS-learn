@@ -28,33 +28,33 @@ console.log(Object.getPrototypeOf(circle1) === Object.getPrototypeOf(circle2));
 
 //* Property attribute.
 
-circle1.color = "red";
-circle1.border = "solid";
+circle1.color = 'red';
+circle1.border = 'solid';
 //# Writable (cant modify)
-Object.defineProperty(circle1, "color", {
+Object.defineProperty(circle1, 'color', {
   writable: false,
 });
-circle1.color = "pink";
+circle1.color = 'pink';
 console.log(circle1.color);
 
-Object.defineProperty(circle1, "color", {
+Object.defineProperty(circle1, 'color', {
   writable: true,
 });
-circle1.color = "pink";
+circle1.color = 'pink';
 console.log(circle1.color);
 
 //# enumerable (cant iterate)
-Object.defineProperty(circle1, "color", {
+Object.defineProperty(circle1, 'color', {
   enumerable: false,
 });
 for (const key in circle1) console.log(key);
-Object.defineProperty(circle1, "color", {
+Object.defineProperty(circle1, 'color', {
   enumerable: true,
 });
 for (const key in circle1) console.log(key);
 
 //# Configrable (cant delete)
-Object.defineProperty(circle1, "border", {
+Object.defineProperty(circle1, 'border', {
   configurable: false,
 });
 delete circle1.border;
@@ -64,10 +64,10 @@ console.log(circle1.border);
 //     configurable:true
 // }); //! The configurable property controls whether a property's configuration can be changed, and once set to false, it cannot be changed back to true.
 Circle.prototype.draw = () => {
-  console.log("draw");
+  console.log('draw');
 };
 circle1.draw();
-console.log(circle1.toString("radius"));
+console.log(circle1.toString('radius'));
 
 // Circle.prototype.toString = ()=> {
 //     console.log(this);//? windows?
@@ -77,9 +77,9 @@ console.log(circle1.toString("radius"));
 // prototype member. a function is defined without prototype key word it is called instance member.
 Circle.prototype.toString = function () {
   console.log(this);
-  return "the radius of the circle is " + this.radius;
+  return 'the radius of the circle is ' + this.radius;
 };
-console.log(circle1.toString("radius"));
+console.log(circle1.toString('radius'));
 console.log(circle1.radius);
 
 //# Object.keys can't iterate over instance members while forin loop can

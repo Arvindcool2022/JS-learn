@@ -1,10 +1,10 @@
 function Circle(radius) {
   (this.radius = radius),
     (this.draw = () => {
-      console.log("draw");
+      console.log('draw');
     });
   this.move = function () {
-    console.log("move");
+    console.log('move');
   };
 }
 

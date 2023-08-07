@@ -24,11 +24,11 @@ const createProductsPage = (array) => {
                                 <p class="DeliveryDetails">${obj.DeliveryDetails}</p>
                              </div>
                         </div>`;
-    document.querySelector(".wrapper").insertAdjacentHTML("beforeend", element);
+    document.querySelector('.wrapper').insertAdjacentHTML('beforeend', element);
   });
 };
 
-fetch("./product.json")
+fetch('./product.json')
   .then((jsonContent) => jsonContent.json())
   .then((convertedJson) => createProductsPage(convertedJson));
 
@@ -37,7 +37,7 @@ fetch("./product.json")
 2. add details of the the product to the html page through which target was clicked
 */
 
-const wrapper = document.querySelector(".wrapper");
+const wrapper = document.querySelector('.wrapper');
 
 // const addProduct = (event) => {
 //     let closestCard = event.target.closest(".card");
@@ -51,13 +51,13 @@ const wrapper = document.querySelector(".wrapper");
 
 const sendProduct = (event) => {
   // let closestCard = event.target.closest(".card");
-  let selectedProductsHtmlContent = event.target.closest(".card").outerHTML;
-  sessionStorage.setItem("selectedProduct", selectedProductsHtmlContent);
-  window.location.href = "productShowCase.html";
+  let selectedProductsHtmlContent = event.target.closest('.card').outerHTML;
+  sessionStorage.setItem('selectedProduct', selectedProductsHtmlContent);
+  window.location.href = 'productShowCase.html';
   // window.open('productShowCase.html', '_blank');
 };
 
-wrapper.addEventListener("click", sendProduct);
+wrapper.addEventListener('click', sendProduct);
 //# PRODUCT PAGE CODE ENDS HERE.
 
 //# CODE FOR TABLE STARTS HERE.
@@ -76,8 +76,8 @@ const createTableHeader = (array) => {
   array.forEach((element) => {
     const headerElement = `<th>${element}</th>`;
     document
-      .querySelector(".mock-headers")
-      .insertAdjacentHTML("beforeend", headerElement);
+      .querySelector('.mock-headers')
+      .insertAdjacentHTML('beforeend', headerElement);
   });
 };
 
@@ -88,23 +88,23 @@ const createTable = (array) => {
   array.forEach((obj) => {
     const element = `<tr id="row${obj.id}"></tr>`;
     document
-      .querySelector(".mock-table")
-      .insertAdjacentHTML("beforeend", element);
+      .querySelector('.mock-table')
+      .insertAdjacentHTML('beforeend', element);
   });
   array.forEach((obj) => {
     for (const key in obj) {
       let content = `<td> ${obj[key]}</td>`;
       let id = `row${obj.id}`;
-      document.getElementById(id).insertAdjacentHTML("beforeend", content);
+      document.getElementById(id).insertAdjacentHTML('beforeend', content);
     }
   });
 };
 
 //https:\//jsonplaceholder.typicode.com/
-fetch("https://fakestoreapi.com/users")
+fetch('https://fakestoreapi.com/users')
   .then((response) => response.json())
   .then((mockData) => createTable(mockData))
-  .catch((error) => console.error("Error in table fetching data:", error));
+  .catch((error) => console.error('Error in table fetching data:', error));
 
 //# CODE FOR TABLE ENDS HERE.
 

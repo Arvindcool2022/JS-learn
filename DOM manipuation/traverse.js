@@ -28,7 +28,7 @@ const changeColor = (element, color) => (element.style.background = color);
 // const childrenOfParentOne =Array.from(parentOne.children);
 // childrenOfParentOne.forEach(element => changeColor(element,'orchid'));
 
-const childOne = document.querySelector("#child-1");
+const childOne = document.querySelector('#child-1');
 // changeColor(childOne, '#333');
 // const firstParent = childOne.parentElement;
 // changeColor(firstParent, 'seagreen');
@@ -39,4 +39,4 @@ const childOne = document.querySelector("#child-1");
 // changeColor(grandparent, 'peru');
 
 const childTwo = childOne.nextElementSibling;
-changeColor(childTwo.previousElementSibling, "#333");
+changeColor(childTwo.previousElementSibling, '#333');

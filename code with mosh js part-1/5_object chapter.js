@@ -1,14 +1,14 @@
 //*CREATE OBJECT WITH OBJECT LITERIAL
 const car = {
-  name: "mustang",
-  color: "black",
+  name: 'mustang',
+  color: 'black',
   specialEdition: true,
   accessories: {
-    interior: "seatCover",
-    exterior: "spoiler",
+    interior: 'seatCover',
+    exterior: 'spoiler',
   },
   currentCondition() {
-    console.log("good");
+    console.log('good');
   },
 };
 // console.log(car);
@@ -21,7 +21,7 @@ function createProfile(firstName, lastName, age, married) {
     age,
     married,
     creditScore: function () {
-      console.log("x points");
+      console.log('x points');
     },
     fullName: function () {
       console.log(person.firstName + person.lastName);
@@ -29,9 +29,9 @@ function createProfile(firstName, lastName, age, married) {
   };
 }
 
-const profile1 = createProfile("john", "smith", 30, true);
+const profile1 = createProfile('john', 'smith', 30, true);
 // console.log(profile1);
-const profile2 = createProfile("ben", "paker", 25, false);
+const profile2 = createProfile('ben', 'paker', 25, false);
 // console.log(profile2);
 
 //*CONSTRUCTOR FUNCTIONS
@@ -44,7 +44,7 @@ const profile2 = createProfile("ben", "paker", 25, false);
 function Circle(radius) {
   (this.radius = radius),
     (this.draw = () => {
-      console.log("draw");
+      console.log('draw');
     });
 }
 
@@ -57,9 +57,9 @@ const circleOne = new Circle(1);
 // console.log(profile1.constructor)//created using in nuilt object funtion
 
 // console.log(circleOne)
-circleOne.color = "yellow";
+circleOne.color = 'yellow';
 // console.log(circleOne)
-circleOne.color = "red";
+circleOne.color = 'red';
 // console.log(circleOne)
 delete circleOne.color;
 // console.log(circleOne)
@@ -89,7 +89,7 @@ const increase = (number) => {
 increase(number);
 // console.log(number);
 
-let number1 = { name: "arvind", age: 10 };
+let number1 = { name: 'arvind', age: 10 };
 
 const increase1 = (obj) => {
   obj.age++;
@@ -117,8 +117,8 @@ for (const key in circleOne) circleTwo[key] = circleOne[key];
 
 // console.log(circleOne, circleTwo)
 
-const circleThree = Object.assign({ color: "black" }, circleOne); //if no {} notation use it just references the address of 1st object and its same as circleThree = circleOne
+const circleThree = Object.assign({ color: 'black' }, circleOne); //if no {} notation use it just references the address of 1st object and its same as circleThree = circleOne
 // console.log(circleThree)
 
-const circleFour = { ...circleOne, color: "white" };
+const circleFour = { ...circleOne, color: 'white' };
 // console.log(circleFour);

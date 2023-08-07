@@ -8,24 +8,24 @@ const isItLandscape = (width, height) => width > height;
 // EXERCISE THREE (fizzbuzz)
 
 const fizzbuzz = (x) => {
-  if (typeof x === "number") {
+  if (typeof x === 'number') {
     switch (true) {
       case x % 5 === 0 && x % 3 === 0:
-        return "FizzBuzz";
+        return 'FizzBuzz';
         break;
 
       case x % 5 === 0:
-        return "Buzz";
+        return 'Buzz';
         break;
 
       case x % 3 === 0:
-        return "Fizz";
+        return 'Fizz';
         break;
 
       default:
         return x;
     }
-  } else return "not a number";
+  } else return 'not a number';
 };
 
 // EXERCISE FOUR (Demerit points)
@@ -34,9 +34,9 @@ const fizzbuzz = (x) => {
 const checkSpeed = (speed) => {
   let x = Math.floor(speed / 5);
   if (x <= 14) {
-    console.log("OK");
+    console.log('OK');
   } else if (x >= 36) {
-    console.log("License suspended");
+    console.log('License suspended');
   } else {
     let j = 0;
     for (let i = x; i > 14; i--) {
@@ -52,12 +52,12 @@ const checkSpeed2 = (speed) => {
   const speedLimit = 70;
   const kmPerPoint = 5;
   if (speed < speedLimit + kmPerPoint) {
-    console.log("ok");
+    console.log('ok');
     return;
   }
   const points = Math.floor((speed - speedLimit) / kmPerPoint);
-  if (points >= 22) console.log("License suspended");
-  else console.log("points: ", points);
+  if (points >= 22) console.log('License suspended');
+  else console.log('points: ', points);
 };
 
 //EXERCISE FIVE (even or odd number)
@@ -65,7 +65,7 @@ const showNumbers = (limit) => {
   for (let i = 0; i <= limit; i++) {
     // if((i % 2) === 0) console.log (i," EVEN");
     // else console.log (i," ODD");
-    let message = i % 2 === 0 ? "EVEN" : "odd";
+    let message = i % 2 === 0 ? 'EVEN' : 'odd';
     console.log(i, message);
   }
 };
@@ -82,15 +82,15 @@ const countTruthy = (array) => {
 
 //EXERCISE SEVEN (String properties)
 const movie = {
-  title: "a",
+  title: 'a',
   releaseYear: 2015,
-  director: "b",
+  director: 'b',
   rating: 8.9,
 };
 
 const showStringProperties = (obj) => {
   for (const key in obj)
-    if (typeof obj[key] === "string") console.log(key, obj[key]);
+    if (typeof obj[key] === 'string') console.log(key, obj[key]);
 };
 
 //EXERCISE EIGHT (Sum of multiples of 3 and 5)
@@ -135,14 +135,14 @@ const calculateGrade1 = (marks) => {
   // :(average < 70 && average >=60) ? "D"
   // : "F"; make it simple
   return average < 60
-    ? "F"
+    ? 'F'
     : average < 70
-    ? "D"
+    ? 'D'
     : average < 80
-    ? "C"
+    ? 'C'
     : average < 90
-    ? "B"
-    : "A";
+    ? 'B'
+    : 'A';
 };
 
 //for function reuseablitity => do it like this
@@ -150,14 +150,14 @@ const calculateGrade1 = (marks) => {
 const calculateGrade = (marks) => {
   const average = calculateAverage(marks);
   return average < 60
-    ? "F"
+    ? 'F'
     : average < 70
-    ? "D"
+    ? 'D'
     : average < 80
-    ? "C"
+    ? 'C'
     : average < 90
-    ? "B"
-    : "A";
+    ? 'B'
+    : 'A';
 };
 
 const calculateAverage = (array) => {
@@ -169,9 +169,9 @@ const calculateAverage = (array) => {
 //EXERCISE TEN (Stars)
 //my soln
 const showStars = (rows) => {
-  let stars = "";
+  let stars = '';
   for (let i = 0; i < rows; i++) {
-    stars += "*";
+    stars += '*';
     console.log(stars);
   }
 };
@@ -179,8 +179,8 @@ const showStars = (rows) => {
 //mosh soln
 const showStars1 = (limit) => {
   for (let row = 1; row <= limit; row++) {
-    let pattern = "";
-    for (let i = 0; i < row; i++) pattern += "*";
+    let pattern = '';
+    for (let i = 0; i < row; i++) pattern += '*';
     console.log(pattern);
   }
 };
@@ -216,10 +216,10 @@ const guessTheNumber = (number) => {
   const randomNumber = getRandomNumber(10) + 1;
   console.log(randomNumber);
   return number === randomNumber
-    ? "correct"
+    ? 'correct'
     : number > randomNumber
-    ? "too high"
-    : "too low";
+    ? 'too high'
+    : 'too low';
 };
 
 const getRandomNumber = (max) => {
