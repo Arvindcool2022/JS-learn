@@ -59,11 +59,9 @@ const sendProduct = (event) => {
 };
   
 wrapper.addEventListener("click", sendProduct);
-
-
-
-
 //# PRODUCT PAGE CODE ENDS HERE.
+
+
 
 
 //# CODE FOR TABLE STARTS HERE.

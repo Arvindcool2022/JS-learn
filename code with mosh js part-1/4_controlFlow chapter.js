@@ -138,3 +138,17 @@ newPElem.appendChild(newText);
 
 // Append the new p element to the body
 document.body.appendChild(newPElem);
+
+const pw = (x, n) =>{
+    let result = 1;
+    for (let i = 0; i < n; i++)
+        result *= x;
+
+    return result
+}
+
+
+let pw1 = (x, n) => (n===1) ? x : x * pw1(x, (n-1)); 
+
+console.log(pw(2,8))
+console.log(pw1(2,2))

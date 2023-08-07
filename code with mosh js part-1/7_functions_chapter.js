@@ -147,7 +147,7 @@ const video = {
     tags: ['x', 'y', 'z'],
     showTags() {
         this.tags.forEach(function(tag){ //forEach(callbackFn, thisArg)
-            //we are in a regular function now.
+            //we are in a regular function declaration now.
             console.log (this.title, tag); //shows windows obj unless we explitly set 'this' like shown after curly braces. 
         }/*,this*/);
     },
@@ -160,9 +160,9 @@ const video = {
 // playVideo.call(video,1); //call(thisArg, arg1, /* …, */ argN)
 // playVideo.call(video,[2]); //apply(thisArg, argsArray)
 // const bounded = playVideo.bind(video); //bind(thisArg, arg1, arg2, /* …, */ argN)
-// bounded(3); // creates a new copy of the orginal function but binded with a obj
+// bounded(3); // creates a new copy of the orginal function and binded with a obj
 
-const random = ()=> {
+const random = () => {
     console.log(this)
 };
 // random();
