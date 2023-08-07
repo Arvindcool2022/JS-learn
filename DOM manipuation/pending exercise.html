@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,8 @@
             list-style: none;
             padding-inline: 0;
         }
-        #category > li {
+
+        #category>li {
             cursor: pointer;
             width: max-content;
             font-size: 1.25rem;
@@ -20,6 +22,7 @@
             transition: all 250ms ease;
             position: relative;
         }
+
         /* #category > li::before {
             position: absolute;
             content: '';
@@ -36,8 +39,8 @@
         #category > li:hover::before {
             transform: scaleX(1);
         } */
-        
-        #category > li:hover {
+
+        #category>li:hover {
             transform: translatex(3px) scale(1.1);
             color: rgb(0, 33, 131);
         }
@@ -50,21 +53,25 @@
             flex-direction: column;
             align-items: center;
         }
-        input{
+
+        input {
             margin: 1rem;
             max-width: 300px;
             width: 200px;
-            padding: 0.25rem;     
+            padding: 0.25rem;
         }
-        #button{
+
+        #button {
             width: 75px;
             padding-top: 0.25rem;
             font-weight: 600;
         }
+
         .invalid {
             border: 2px red solid;
             position: relative;
         }
+
         .invalid::after {
             content: 'invalid';
             font-size: 0.25rem;
@@ -77,11 +84,9 @@
         label {
             font-weight: 600;
         }
-       
-
-
     </style>
 </head>
+
 <body>
     <div>
         <ul id="category">
@@ -96,7 +101,7 @@
 
     <section>
         <form action="/" id="form">
-            
+
             <div class="input-control">
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" placeholder="Name" class="invalid" required>
@@ -120,4 +125,5 @@
 
     <script src="main.js"></script>
 </body>
+
 </html>

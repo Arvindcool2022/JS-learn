@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
             border: 3px solid #222;
             box-sizing: border-box;
         }
+
         body {
             height: 100vh;
             display: flex;
@@ -16,11 +18,13 @@
             justify-content: center;
             background-color: #e2e2e2;
         }
+
         .grandParent {
             background-color: #E6A932;
             padding: 3rem;
             width: min(90%, 700px);
         }
+
         .parents {
             background-color: #E65B49;
             padding-block: 3rem;
@@ -28,6 +32,7 @@
             display: flex;
             justify-content: space-evenly;
         }
+
         .child {
             background-color: #3EDBE5;
             height: 125px;
@@ -35,17 +40,19 @@
         }
     </style>
 </head>
+
 <body>
     <section class="grandParent" id="grandParent">
-        <div class="parents" >
+        <div class="parents">
             <div class="child" id="child-1"></div>
             <div class="child" id="child-2"></div>
         </div>
-        <div class="parents" >
+        <div class="parents">
             <div class="child" id="child-3"></div>
             <div class="child" id="child-4"></div>
         </div>
     </section>
     <script src="traverse.js" defer></script>
 </body>
+
 </html>

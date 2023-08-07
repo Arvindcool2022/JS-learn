@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>learn Json</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -23,14 +25,16 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1rem;
         }
+
         .card {
             cursor: pointer;
             text-align: center;
-            box-shadow: 0 .5rem 1rem  rgba(0,0,0,0.15);
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
             padding: 1rem;
             border-radius: 15px;
             transition: all 150ms ease-in;
         }
+
         .card:hover {
             transform: scale(1.05);
         }
@@ -44,9 +48,11 @@
         .card-body {
             padding-block: 1rem;
         }
+
         .title {
             font-weight: 700;
         }
+
         .offerprice .currency {
             font-size: 1rem;
         }
@@ -56,6 +62,7 @@
             opacity: 0.5;
             font-size: 1rem;
         }
+
         .discountPercentage {
             font-size: 1rem;
             font-weight: 700;
@@ -71,35 +78,40 @@
             display: flex;
             padding: 2rem;
             justify-content: space-around;
-            box-shadow: 0 .5rem 1rem  rgba(0,0,0,0.15);
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
             transition: all 500ms ease;
         }
+
         .container .card:hover {
-            box-shadow: 0 0.5rem 2rem  rgba(0,0,0,0.5);
+            box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.5);
         }
 
         .container .card-body {
             align-self: center;
         }
+
         .container .title {
             font-weight: 900;
             font-size: 2rem;
             margin-bottom: 2rem;
             text-decoration: underline;
         }
+
         .container .offerprice .currency {
             font-size: 1rem;
         }
-        
+
         .container .originalprice {
             text-decoration: line-through;
             opacity: 0.5;
             font-size: 1rem;
         }
+
         .container .discountPercentage {
             font-size: 1rem;
             font-weight: 700;
         }
+
         .container .DeliveryDetails,
         .container .shortDescription {
             font-size: 1.25rem;
@@ -112,18 +124,20 @@
             border-collapse: collapse;
             width: 100%;
         }
-        
-        td, th {
+
+        td,
+        th {
             border: 1px solid #dddddd;
             text-align: left;
             padding: 8px;
         }
-        
+
         tbody:nth-child(even) {
             background-color: #dddddd;
         }
     </style>
 </head>
+
 <body>
     <section>
         <div class="wrapper">
@@ -145,4 +159,5 @@
     </aside>
 
 </body>
+
 </html>

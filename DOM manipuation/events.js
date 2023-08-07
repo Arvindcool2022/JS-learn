@@ -1,21 +1,23 @@
 //* https://www.w3.org/TR/DOM-Level-3-Events/#event-flow
-const colorChange =(element, color) => element.style.backgroundColor = color;
+const colorChange = (element, color) => (element.style.backgroundColor = color);
 
-const grandparent = document.querySelector('.grandparent');
-const parent = document.querySelector('.parent');
-const child = document.querySelector('.child');
+const grandparent = document.querySelector(".grandparent");
+const parent = document.querySelector(".parent");
+const child = document.querySelector(".child");
 const childStyle = window.getComputedStyle(child);
 
-const colorToggle =(element, color) => {
-    let bgColor = element.getAttribute('style');
+const colorToggle = (element, color) => {
+  let bgColor = element.getAttribute("style");
 
-    (bgColor === null) ?  element.style.backgroundColor = color : element.removeAttribute('style');
+  bgColor === null
+    ? (element.style.backgroundColor = color)
+    : element.removeAttribute("style");
 };
 
 // grandparent.addEventListener('click', e => {
 //     console.log(e);
 // });
-    
+
 // parent.addEventListener('click', e => {
 //     console.log(e);
 // });
@@ -27,7 +29,7 @@ const colorToggle =(element, color) => {
 // document.addEventListener('click', e => {
 //     console.log(e);
 // });
-                
+
 //# without event.stopPropagation();
 // child.addEventListener('click',() => colorToggle(child, 'white'));
 // parent.addEventListener('click',() => colorToggle(parent, 'white'));
@@ -54,28 +56,28 @@ const colorToggle =(element, color) => {
 
 //# event delegation with target
 function random(number) {
-    return Math.floor(Math.random() * number);
+  return Math.floor(Math.random() * number);
 }
-  
+
 function bgChange() {
-    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-    return rndCol;
+  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  return rndCol;
 }
 
 const container = document.querySelector("#container");
 
 const bgChangeMouseOver = (event) => {
-    event.target.style.backgroundColor = bgChange();
-    console.log(event.target);
+  event.target.style.backgroundColor = bgChange();
+  console.log(event.target);
 };
 
 const bgChangeMouseOut = (event) => {
-    event.target.removeAttribute('style');
-    console.log(event.target);
+  event.target.removeAttribute("style");
+  console.log(event.target);
 };
-  
+
 container.addEventListener("mouseover", bgChangeMouseOver);
 container.addEventListener("mouseout", bgChangeMouseOut);
 
-grandparent.addEventListener('mouseover', bgChangeMouseOver);
+grandparent.addEventListener("mouseover", bgChangeMouseOver);
 grandparent.addEventListener("mouseout", bgChangeMouseOut);
