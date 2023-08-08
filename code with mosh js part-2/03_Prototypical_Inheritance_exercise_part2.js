@@ -41,7 +41,7 @@ function HtmlImageElement(src, alt = 'none set') {
 }
 setPrototypeToNewSource(HtmlImageElement, HtmlElement);
 
-const myImage = HtmlImageElement('https:/');
+const myImage = new HtmlImageElement('https:/');
 console.log(myImage);
 
 let elements = [
