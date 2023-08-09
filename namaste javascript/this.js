@@ -4,8 +4,14 @@ let z = {
   printOne() {
     console.log(`first`, this.x);
   },
-  printTwo: () => console.log(`second`, this.x),
+  printTwo() {
+    const c = () => console.log(`second`, this.x);
+    c();
+  },
   printThree(c) {
+    c();
+  },
+  printFour: c => {
     c();
   }
 };
@@ -18,5 +24,9 @@ let yArrow = () => console.log(`fourth`, this.x);
 // z.printTwo(); // the window object
 // z.printThree(y); // the window object
 // z.printThree(yArrow); // the window object
+z.printFour(y); // the window object
+z.printFour(yArrow); // the window object
 
 // per = a; // from object to number
+
+//! arrow funtion used the this value of the containing function

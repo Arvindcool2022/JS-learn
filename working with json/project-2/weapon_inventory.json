@@ -1,0 +1,245 @@
+{
+    "weapons": [
+      {
+        "id": "sword001",
+        "name": "Excalibur Blade",
+        "type": "sword",
+        "damage": 50,
+        "level": 5,
+        "durability": 150
+      },
+      {
+        "id": "sword002",
+        "name": "Shadowsteel Katana",
+        "type": "sword",
+        "damage": 45,
+        "level": 4,
+        "durability": 120
+      },
+      {
+        "id": "sword003",
+        "name": "Flameforged Saber",
+        "type": "sword",
+        "damage": 55,
+        "level": 6,
+        "durability": 160
+      },
+      {
+        "id": "sword004",
+        "name": "Crystal Rapier",
+        "type": "sword",
+        "damage": 40,
+        "level": 3,
+        "durability": 100
+      },
+      {
+        "id": "sword005",
+        "name": "Venomous Shortsword",
+        "type": "sword",
+        "damage": 38,
+        "level": 2,
+        "durability": 90
+      },
+      {
+        "id": "sword006",
+        "name": "Thunderstrike Cutlass",
+        "type": "sword",
+        "damage": 42,
+        "level": 4,
+        "durability": 130
+      },
+      {
+        "id": "sword007",
+        "name": "Rune-etched Longsword",
+        "type": "sword",
+        "damage": 48,
+        "level": 5,
+        "durability": 140
+      },
+      {
+        "id": "sword008",
+        "name": "Voidforged Scimitar",
+        "type": "sword",
+        "damage": 53,
+        "level": 6,
+        "durability": 170
+      },
+      {
+        "id": "sword009",
+        "name": "Ebonblade Greatsword",
+        "type": "sword",
+        "damage": 58,
+        "level": 7,
+        "durability": 180
+      },
+      {
+        "id": "sword010",
+        "name": "Frostbite Dagger",
+        "type": "sword",
+        "damage": 35,
+        "level": 2,
+        "durability": 80
+      },
+      {
+        "id": "bow001",
+        "name": "Stormcaster Longbow",
+        "type": "bow",
+        "damage": 42,
+        "level": 4,
+        "arrows": 80
+      },
+      {
+        "id": "bow002",
+        "name": "Moonshadow Recurve Bow",
+        "type": "bow",
+        "damage": 38,
+        "level": 3,
+        "arrows": 70
+      },
+      {
+        "id": "bow003",
+        "name": "Emberflare Crossbow",
+        "type": "bow",
+        "damage": 45,
+        "level": 5,
+        "arrows": 90
+      },
+      {
+        "id": "bow004",
+        "name": "Serpent's Spit Composite Bow",
+        "type": "bow",
+        "damage": 50,
+        "level": 5,
+        "arrows": 100
+      },
+      {
+        "id": "bow005",
+        "name": "Aurora Hunter's Bow",
+        "type": "bow",
+        "damage": 55,
+        "level": 6,
+        "arrows": 110
+      },
+      {
+        "id": "bow006",
+        "name": "Silent Windseeker Bow",
+        "type": "bow",
+        "damage": 48,
+        "level": 4,
+        "arrows": 90
+      },
+      {
+        "id": "bow007",
+        "name": "Starfall Bow",
+        "type": "bow",
+        "damage": 60,
+        "level": 7,
+        "arrows": 120
+      },
+      {
+        "id": "bow008",
+        "name": "Obsidian Arbalest",
+        "type": "bow",
+        "damage": 52,
+        "level": 6,
+        "arrows": 100
+      },
+      {
+        "id": "bow009",
+        "name": "Ghostwood Reflex Bow",
+        "type": "bow",
+        "damage": 40,
+        "level": 3,
+        "arrows": 70
+      },
+      {
+        "id": "bow010",
+        "name": "Celestial Winged Bow",
+        "type": "bow",
+        "damage": 58,
+        "level": 7,
+        "arrows": 130
+      },
+      {
+        "id": "axe001",
+        "name": "Warbringer Battle Axe",
+        "type": "axe",
+        "damage": 60,
+        "level": 6,
+        "durability": 170
+      },
+      {
+        "id": "axe002",
+        "name": "Thunderclap Executioner",
+        "type": "axe",
+        "damage": 55,
+        "level": 5,
+        "durability": 150
+      },
+      {
+        "id": "axe003",
+        "name": "Frostbite War Axe",
+        "type": "axe",
+        "damage": 52,
+        "level": 5,
+        "durability": 140
+      },
+      {
+        "id": "axe004",
+        "name": "Flamestrike Double Bit Axe",
+        "type": "axe",
+        "damage": 58,
+        "level": 6,
+        "durability": 160
+      },
+      {
+        "id": "axe005",
+        "name": "Voidreaver Halberd",
+        "type": "axe",
+        "damage": 62,
+        "level": 7,
+        "durability": 180
+      },
+      {
+        "id": "axe006",
+        "name": "Wyrmfang Tomahawk",
+        "type": "axe",
+        "damage": 42,
+        "level": 3,
+        "durability": 120
+      },
+      {
+        "id": "axe007",
+        "name": "Enforcer's Reaver",
+        "type": "axe",
+        "damage": 48,
+        "level": 4,
+        "durability": 130
+      },
+      {
+        "id": "axe008",
+        "name": "Molten Maul",
+        "type": "axe",
+        "damage": 55,
+        "level": 5,
+        "durability": 150
+      },
+      {
+        "id": "axe009",
+        "name": "Soulcleaver Greataxe",
+        "type": "axe",
+        "damage": 65,
+        "level": 7,
+        "durability": 190
+      },
+      {
+        "id": "axe010",
+        "name": "Ironbark Hewing Axe",
+        "type": "axe",
+        "damage": 38,
+        "level": 2,
+        "durability": 100
+      }
+    ]
+  }
+  

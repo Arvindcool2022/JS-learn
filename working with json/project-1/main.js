@@ -1,8 +1,8 @@
 //# PRODUCT PAGE CODE STARTS HERE
 
 //from object to grid
-const createProductsPage = (array) => {
-  array.forEach((obj) => {
+const createProductsPage = array => {
+  array.forEach(obj => {
     const element = `<div class="card">
                             <img class="card-img" src="${obj.Image}" alt="${obj.ShortDescription}">
                             <div class="card-body">
@@ -29,8 +29,8 @@ const createProductsPage = (array) => {
 };
 
 fetch('./product.json')
-  .then((jsonContent) => jsonContent.json())
-  .then((convertedJson) => createProductsPage(convertedJson));
+  .then(jsonContent => jsonContent.json())
+  .then(convertedJson => createProductsPage(convertedJson));
 
 /* 
 1. add event listener to wrapper that takes you to prduct show case page.
@@ -49,7 +49,7 @@ const wrapper = document.querySelector('.wrapper');
 
 // wrapper.addEventListener("click", addProduct);
 
-const sendProduct = (event) => {
+const sendProduct = event => {
   // let closestCard = event.target.closest(".card");
   let selectedProductsHtmlContent = event.target.closest('.card').outerHTML;
   sessionStorage.setItem('selectedProduct', selectedProductsHtmlContent);
@@ -72,8 +72,8 @@ const combineUniqueProperties = (arrayOfObj, array) => {
   return array;
 };
 
-const createTableHeader = (array) => {
-  array.forEach((element) => {
+const createTableHeader = array => {
+  array.forEach(element => {
     const headerElement = `<th>${element}</th>`;
     document
       .querySelector('.mock-headers')
@@ -81,17 +81,17 @@ const createTableHeader = (array) => {
   });
 };
 
-const createTable = (array) => {
+const createTable = array => {
   let tableHeader = [];
   tableHeader = combineUniqueProperties(array, tableHeader);
   createTableHeader(tableHeader);
-  array.forEach((obj) => {
+  array.forEach(obj => {
     const element = `<tr id="row${obj.id}"></tr>`;
     document
       .querySelector('.mock-table')
       .insertAdjacentHTML('beforeend', element);
   });
-  array.forEach((obj) => {
+  array.forEach(obj => {
     for (const key in obj) {
       let content = `<td> ${obj[key]}</td>`;
       let id = `row${obj.id}`;
@@ -102,9 +102,9 @@ const createTable = (array) => {
 
 //https:\//jsonplaceholder.typicode.com/
 fetch('https://fakestoreapi.com/users')
-  .then((response) => response.json())
-  .then((mockData) => createTable(mockData))
-  .catch((error) => console.error('Error in table fetching data:', error));
+  .then(response => response.json())
+  .then(mockData => createTable(mockData))
+  .catch(error => console.error('Error in table fetching data:', error));
 
 //# CODE FOR TABLE ENDS HERE.
 

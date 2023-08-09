@@ -1,0 +1,50 @@
+{
+    "players": [
+      {
+        "id": "player1",
+        "equipment": [
+          "sword001",
+          "sword003",
+          "armor001",
+          "ability002"
+        ]
+      },
+      {
+        "id": "player2",
+        "equipment": [
+          "axe001",
+          "armor002",
+          "ability001",
+          "ability004"
+        ]
+      },
+      {
+        "id": "player3",
+        "equipment": [
+          "bow002",
+          "armor003",
+          "ability003",
+          "sword005"
+        ]
+      },
+      {
+        "id": "player4",
+        "equipment": [
+          "sword002",
+          "armor004",
+          "ability005",
+          "bow001"
+        ]
+      },
+      {
+        "id": "player5",
+        "equipment": [
+          "axe002",
+          "bow003",
+          "ability006",
+          "ability009"
+        ]
+      }
+    ]
+  }
+  

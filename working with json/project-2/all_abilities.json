@@ -1,0 +1,85 @@
+{
+    "abilities": [
+      {
+        "id": "ability001",
+        "name": "Fireball",
+        "type": "offensive",
+        "damage": 50,
+        "level": 5,
+        "cooldown": 10
+      },
+      {
+        "id": "ability002",
+        "name": "Healing Touch",
+        "type": "support",
+        "healing": 40,
+        "level": 4,
+        "cooldown": 8
+      },
+      {
+        "id": "ability003",
+        "name": "Frost Nova",
+        "type": "offensive",
+        "damage": 45,
+        "level": 4,
+        "cooldown": 12
+      },
+      {
+        "id": "ability004",
+        "name": "Teleport",
+        "type": "utility",
+        "range": 100,
+        "level": 3,
+        "cooldown": 15
+      },
+      {
+        "id": "ability005",
+        "name": "Invisibility",
+        "type": "utility",
+        "duration": 10,
+        "level": 4,
+        "cooldown": 20
+      },
+      {
+        "id": "ability006",
+        "name": "Lightning Bolt",
+        "type": "offensive",
+        "damage": 55,
+        "level": 5,
+        "cooldown": 10
+      },
+      {
+        "id": "ability007",
+        "name": "Summon Familiar",
+        "type": "summoning",
+        "duration": 60,
+        "level": 6,
+        "cooldown": 30
+      },
+      {
+        "id": "ability008",
+        "name": "Earthquake",
+        "type": "offensive",
+        "damage": 60,
+        "level": 6,
+        "cooldown": 20
+      },
+      {
+        "id": "ability009",
+        "name": "Blink",
+        "type": "utility",
+        "range": 50,
+        "level": 5,
+        "cooldown": 12
+      },
+      {
+        "id": "ability010",
+        "name": "Divine Shield",
+        "type": "defense",
+        "duration": 8,
+        "level": 7,
+        "cooldown": 40
+      }
+    ]
+  }
+  
