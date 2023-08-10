@@ -3,7 +3,7 @@
 
 const arr = [1, 2, 3, 4, 5, -1, -2];
 
-const postiveNums = removeNeg(arr, (x) => x >= 0);
+const postiveNums = removeNeg(arr, x => x >= 0);
 // console.log(postiveNums);
 
 function removeNeg(numbers, callback) {
