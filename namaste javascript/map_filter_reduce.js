@@ -39,3 +39,14 @@ const sameAge1 = cricketPlayers.reduce((acc, player) => {
 
 console.log(sameAge);
 console.log(sameAge1);
+
+//* CHAINING
+
+const firstNameAbove50 = cricketPlayers
+  .filter(x => x.age > 50)
+  .map(x => x.firstName);
+
+const firstNameAbove50Reduce = cricketPlayers.reduce((a, c) => {
+  if (c.age > 50) a.push(c.firstName);
+  return a;
+}, []);
