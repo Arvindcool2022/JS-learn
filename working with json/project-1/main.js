@@ -100,8 +100,9 @@ const createTable = array => {
   });
 };
 
-//https:\//jsonplaceholder.typicode.com/
-fetch('https://fakestoreapi.com/users')
+const URL = 'https://jsonplaceholder.typicode.com/posts';
+//'https://fakestoreapi.com/users'
+fetch(URL)
   .then(response => response.json())
   .then(mockData => createTable(mockData))
   .catch(error => console.error('Error in table fetching data:', error));
