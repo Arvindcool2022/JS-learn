@@ -1,9 +1,11 @@
 const category = document.querySelector('#category');
 
-category.addEventListener('click', (element) => {
-  //? if (element.target.tagName == 'LI')
-  //# window.location.href = '/' + element.target.id;
-  console.log(element.target);
+category.addEventListener('click', element => {
+  if (element.target.tagName == 'LI') {
+    window.location.hash = '#';
+    window.location.href += element.target.id;
+  }
+  console.log(element.target.tagName, element.target.id, window.location);
 });
 
 //*form validation
