@@ -1,7 +1,7 @@
 const radius = [3, 2, 1, 4];
 const square = [5, 10, 2, 1];
 
-const calculate = (arr, cb) => arr.map(x => cb(x));
+const calculate = cb => arr => arr.map(x => cb(x));
 
 function circleArea(x) {
   return Math.PI * x * x;
@@ -28,3 +28,12 @@ function squarePerimeter(x) {
 function squareDiagonalToArea(x) {
   return (x * x) / 2;
 }
+
+const calculateCircleArea = calculate(circleArea);
+const calculateCircleCircumference = calculate(circleCircumference);
+const calculateCircleDiameter = calculate(circleDiameter);
+const calculateSquareArea = calculate(squareArea);
+const calculateSquareDiagonal = calculate(squareDiagonal);
+const calculateSquareDiagonalToArea = calculate(squareDiagonalToArea);
+
+console.log(calculateCircleArea(radius));
