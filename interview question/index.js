@@ -1,45 +1,32 @@
-let arr = [[1, 2], [3, 4], [5, [6, [7, 8], 9]], [10, 11, 12], 14, 15];
+const myMemoize = (func, context = this) => {
+  const cache = {};
 
-// const arrFlattened1 = [...arr].flat(1);
-// const arrFlattened2 = [...arr].flat(2);
-// const arrFlattenedInfinite = [...arr].flat(Infinity);
+  return (...arg) => {
+    const argString = JSON.stringify(arg);
+    if (!cache[argString]) cache[argString] = func.call(context, ...arg);
 
-// console.log(arrFlattened1, arrFlattened2, arrFlattenedInfinite);
-
-const customFlatArray = array => {
-  const output = [];
-
-  array.forEach(e => {
-    if (Array.isArray(e)) output.push(...e);
-    else output.push(e);
-  });
-
-  return output;
+    return cache[argString];
+  };
 };
 
-// console.log(customFlatArray(arr));
-// console.log(customFlatArray(customFlatArray(arr)));
-// console.log(customFlatArray(customFlatArray(customFlatArray(arr))));
+const bigTask = (num1, num2) => {
+  // big task start
+  const startTime = new Date().getTime();
+  let endtime = new Date().getTime();
+  while (endtime - startTime < 2000) {
+    endtime = new Date().getTime();
+  }
+  // big task ends
 
-const customFlatArrayRecuss = (array, depth = 0) => {
-  const output = [];
-  let recuss = depth;
-
-  array.forEach(e => {
-    if (Array.isArray(e)) output.push(...e);
-    else output.push(e);
-  });
-
-  if (recuss === Infinity)
-    recuss = output.some(item => Array.isArray(item)) ? Infinity : 0;
-  else if (recuss > 0) recuss--;
-
-  if (recuss) return customFlatArrayRecuss(output, recuss);
-
-  return output;
+  return num1 * num2;
 };
 
-console.log(customFlatArrayRecuss(arr));
-console.log(customFlatArrayRecuss(arr, 1));
-console.log(customFlatArrayRecuss(arr, 2));
-console.log(customFlatArrayRecuss(arr, Infinity));
+const memoizedBigTask = myMemoize(bigTask);
+
+console.time('first');
+console.log(memoizedBigTask(5000, 5500));
+console.timeEnd('first'); // console.time works in vs code not here
+
+console.time('second');
+console.log(memoizedBigTask(5000, 5500));
+console.timeEnd('second');

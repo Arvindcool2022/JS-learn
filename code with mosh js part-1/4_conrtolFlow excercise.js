@@ -7,7 +7,7 @@ const isItLandscape = (width, height) => width > height;
 
 // EXERCISE THREE (fizzbuzz)
 
-const fizzbuzz = (x) => {
+const fizzbuzz = x => {
   if (typeof x === 'number') {
     switch (true) {
       case x % 5 === 0 && x % 3 === 0:
@@ -31,7 +31,7 @@ const fizzbuzz = (x) => {
 // EXERCISE FOUR (Demerit points)
 
 // my soln
-const checkSpeed = (speed) => {
+const checkSpeed = speed => {
   let x = Math.floor(speed / 5);
   if (x <= 14) {
     console.log('OK');
@@ -48,7 +48,7 @@ const checkSpeed = (speed) => {
 };
 
 //mosh soln
-const checkSpeed2 = (speed) => {
+const checkSpeed2 = speed => {
   const speedLimit = 70;
   const kmPerPoint = 5;
   if (speed < speedLimit + kmPerPoint) {
@@ -61,7 +61,7 @@ const checkSpeed2 = (speed) => {
 };
 
 //EXERCISE FIVE (even or odd number)
-const showNumbers = (limit) => {
+const showNumbers = limit => {
   for (let i = 0; i <= limit; i++) {
     // if((i % 2) === 0) console.log (i," EVEN");
     // else console.log (i," ODD");
@@ -73,7 +73,7 @@ const showNumbers = (limit) => {
 //EXERCISE SIX (count truthy)
 const arr = [0, 1, 2, NaN, null, undefined, 5];
 
-const countTruthy = (array) => {
+const countTruthy = array => {
   let numberOfTruthy = 0;
   //if (index) ++numberOfTruthy;
   for (const index of array) index ? ++numberOfTruthy : numberOfTruthy;
@@ -85,17 +85,17 @@ const movie = {
   title: 'a',
   releaseYear: 2015,
   director: 'b',
-  rating: 8.9,
+  rating: 8.9
 };
 
-const showStringProperties = (obj) => {
+const showStringProperties = obj => {
   for (const key in obj)
     if (typeof obj[key] === 'string') console.log(key, obj[key]);
 };
 
 //EXERCISE EIGHT (Sum of multiples of 3 and 5)
 //my soln
-const sumOFMultiplesOFThreeAndFive = (limit) => {
+const sumOFMultiplesOFThreeAndFive = limit => {
   let firstValue = 3;
   let secondValue = 5;
 
@@ -113,7 +113,7 @@ const sumOFMultiplesOFThreeAndFive = (limit) => {
 };
 
 // Mosh Soln
-const weirdSum2 = (limit) => {
+const weirdSum2 = limit => {
   let sumValue = 0;
 
   for (let i = 0; i <= limit; i++)
@@ -125,7 +125,7 @@ const weirdSum2 = (limit) => {
 
 const marks = [80, 80, 50];
 
-const calculateGrade1 = (marks) => {
+const calculateGrade1 = marks => {
   let totalMarks = 0;
   for (const value of marks) totalMarks += value;
   let average = totalMarks / marks.length;
@@ -147,7 +147,7 @@ const calculateGrade1 = (marks) => {
 
 //for function reuseablitity => do it like this
 
-const calculateGrade = (marks) => {
+const calculateGrade = marks => {
   const average = calculateAverage(marks);
   return average < 60
     ? 'F'
@@ -160,15 +160,15 @@ const calculateGrade = (marks) => {
     : 'A';
 };
 
-const calculateAverage = (array) => {
+const calculateAverage = array => {
   let sum = 0;
   for (const value of array) sum += value;
-  return sum / array.length;
+  return sum / array.length + 1;
 };
 
 //EXERCISE TEN (Stars)
 //my soln
-const showStars = (rows) => {
+const showStars = rows => {
   let stars = '';
   for (let i = 0; i < rows; i++) {
     stars += '*';
@@ -177,7 +177,7 @@ const showStars = (rows) => {
 };
 
 //mosh soln
-const showStars1 = (limit) => {
+const showStars1 = limit => {
   for (let row = 1; row <= limit; row++) {
     let pattern = '';
     for (let i = 0; i < row; i++) pattern += '*';
@@ -186,12 +186,12 @@ const showStars1 = (limit) => {
 };
 
 //EXERCISE ELEVEN(prime numbers)
-const showPrimes = (limit) => {
+const showPrimes = limit => {
   for (let number = 2; number < limit; number++)
     if (checkPrime(number)) console.log(number);
 };
 
-const checkPrime = (number) => {
+const checkPrime = number => {
   if (number <= 1) return false;
   for (let factor = 2; factor < number; factor++)
     if (number % factor === 0) return false;
@@ -203,7 +203,7 @@ showPrimes(20);
 
 //OWN EXERCISE ONE(Implement a program that calculates the factorial of a given positive integer using a loop.)
 
-const calculateFactorial = (num) => {
+const calculateFactorial = num => {
   let factorialResult = 1;
   for (let i = 1; i <= num; i++) factorialResult *= i;
 
@@ -212,7 +212,7 @@ const calculateFactorial = (num) => {
 
 //OWN EXERCISE TWO (Implement a function that generates a random number between 1 and 10 and asks the user to guess the number. The program should provide feedback if the guess is too high or too low until the correct number is guessed.)
 
-const guessTheNumber = (number) => {
+const guessTheNumber = number => {
   const randomNumber = getRandomNumber(10) + 1;
   console.log(randomNumber);
   return number === randomNumber
@@ -222,7 +222,7 @@ const guessTheNumber = (number) => {
     : 'too low';
 };
 
-const getRandomNumber = (max) => {
+const getRandomNumber = max => {
   return Math.floor(Math.random() * max);
 };
 
